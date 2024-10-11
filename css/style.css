@@ -1,0 +1,485 @@
+/* GENERAL */
+@font-face {
+  font-family: Lemon Milk;
+  src: url(/assets/font/lemon/LEMONMILK-Bold.otf);
+}
+
+:root {
+    --black: #20211a;
+    --red: #ff6961;
+    --yellow: #fee032;
+    --blue: #dbeef7;
+}
+
+* {
+  margin: 0;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+.home-page {
+  background-color: var(--yellow);
+}
+
+/* NAVIGATION BAR */
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 30px 5%;
+}
+
+.logo {
+  font-family: Lemon Milk;
+  font-size: 1.5rem;
+  font-weight: 700;
+  color: var(--black);
+  text-decoration: none;
+}
+
+.logo-footer {
+  font-family: Lemon Milk;
+  font-size: 1.5rem;
+  font-weight: 700;
+  color: var(--black);
+  text-decoration: none;
+}
+
+.logo-short {
+  display: none;
+  font-family: Lemon Milk;
+  font-size: 1.5rem;
+  font-weight: 700;
+  color: var(--black);
+  text-decoration: none;
+}
+
+.nav-links {
+  display: flex;
+  list-style: none;
+}
+
+.nav-links li a {
+  text-decoration: none;
+  color: var(--black);
+  font-weight: 700;
+  margin-left: 10px;
+  padding: 10px 10px;
+  transition-duration: 0.3s;
+}
+
+.nav-links li a:hover {
+  background-color: rgba(90, 90, 90, 0.3);
+  border-radius: 20px;
+}
+
+.active-page {
+  color: var(--red) !important;
+}
+
+.about-short {
+  margin: 0;
+  display: none;
+}
+
+.projects-short {
+  margin: 0;
+  display: none;
+}
+
+.about-header {
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  padding: 60px 50px;
+}
+
+.card-container {
+  width: 30%;
+}
+
+.card {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  border: 7px solid var(--black);
+  border-radius: 10px;
+  box-shadow: var(--black) -20px 20px;
+  animation: float 4s infinite;
+}
+
+@keyframes float {
+  0% {
+    transform: translateY(0px);
+  }
+  50% {
+    transform: translateY(-5px);
+  }
+  100% {
+    transform: translateY(0px);
+  }
+}
+
+.tab-style {
+  display: flex;
+  justify-content: end;
+  align-items: center;
+  width: 100%;
+  height: 50px;
+  background-color: var(--red);
+  border-radius: 3px 3px 0px 0px;
+  border-bottom: 7px solid var(--black);
+}
+
+.tab-circle {
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  background-color: var(--black);
+  margin-right: 10px;
+}
+
+.img-pp {
+  width: 100%;
+  filter: grayscale();
+  border-radius: 0px 0px 3px 3px;
+}
+
+.title {
+  font-family: Lemon Milk;
+  font-size: 3rem;
+  font-weight: 700;
+  color: var(--black);
+  margin-top: 10px;
+}
+
+.header-text p {
+  font-size: 1.1rem;
+  margin-top: 15px;
+  max-width: 500px;
+}
+
+.contact-button {
+  display: flex;
+  justify-content: start;
+  align-items: center;
+  margin-top: 30px;
+}
+
+.contact-button a {
+  text-decoration: none;
+  color: var(--black);
+  background-color: var(--blue);
+  padding: 7px;
+  padding-bottom: 0;
+  margin-right: 10px;
+  border-radius: 7px;
+  border: 2px solid var(--black);
+  transition-duration: 0.3s;
+}
+
+.contact-button a:hover {
+  background-color: var(--red);
+  box-shadow: var(--black) -3px 3px;
+}
+
+.testimoni {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
+  align-items: center;
+  padding: 50px 0;
+  margin: 50px 0;
+}
+
+.testimoni-card {
+  width: 170px;
+  background-color: var(--red);
+  border: 7px solid var(--black);
+  border-radius: 10px;
+  padding: 20px;
+  margin: 10px;
+  text-align: center;
+  transition-duration: 0.3s;
+}
+
+.testimoni-card-text h1 {
+  font-family: Lemon Milk;
+  font-size: 2rem;
+  font-weight: 700;
+  color: var(--black);
+}
+
+.testimoni-card-text h2 {
+  display: none;
+}
+
+.testimoni-card:hover {
+  background-color: var(--blue);
+}
+
+.contact {
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  padding: 50px 0;
+  margin: 50px 0px;
+}
+
+.contact-me {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: var(--blue);
+  padding: 20px;
+  width: 30%;
+  border-radius: 10px;
+  border: 7px solid var(--black);
+}
+
+.contact-form {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+}
+
+.input-form {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 10px;
+}
+
+input {
+  border: none;
+  border-bottom: 2px solid var(--black);
+  background-color: transparent;
+}
+
+input:focus {
+  outline: none;
+  border-bottom: 2px solid var(--red);
+}
+
+textarea {
+  border: none;
+  border-bottom: 2px solid var(--black);
+  background-color: transparent;
+}
+
+textarea:focus {
+  outline: none;
+  border-bottom: 2px solid var(--red);
+}
+
+.button {
+  margin-top: 10px;
+  cursor: pointer;
+  background-color: var(--red);
+  border: 3px solid var(--black);
+  border-radius: 10px;
+  padding: 10px;
+  font-family: Lemon Milk;
+}
+
+footer {
+  display: flex;
+  justify-content: end;
+  align-items: start;
+  padding: 50px 0px;
+  width: 90%;
+}
+
+.footer-list {
+  display: flex;
+  justify-content: end;
+  align-items: start;
+  padding: 20px 0;
+}
+
+.footer-list-item {
+  margin-right: 70px;
+}
+
+.footer-list-item p {
+  margin-top: 10px;
+}
+
+.footer-list-item p a {
+  text-decoration: none;
+  font-size: 1rem;
+  color: var(--black);
+}
+
+.footer-list-item p a:hover {
+  color: var(--red);
+  text-decoration: underline;
+}
+
+/* PROJECTS PAGE */
+.projects-page {
+  background-color: var(--blue);
+}
+
+main {
+  padding: 50px 20px;
+}
+
+.project-list {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.project-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 20px 0px;
+  width: 90%;
+}
+
+.project-title {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+  background-color: var(--red);
+  border: 7px solid var(--black);
+  border-radius: 10px;
+  padding: 10px;
+}
+
+.project-title h1 {
+  font-family: Lemon Milk;
+  font-size: 2rem;
+}
+
+.project-title-dot {
+  display: flex;
+  align-items: center;
+}
+
+.project-card {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  padding: 50px 0px 20px 0px;
+  text-decoration: none;
+  color: var(--black);
+  background-color: var(--yellow);
+  border: 7px solid var(--black);
+  border-radius: 10px;
+  gap: 70px;
+  transition-duration: 0.3s;
+}
+
+.project-card:hover {
+  transform: scale(1.05);
+}
+
+.project-card img {
+  width: 50%;
+  border-radius: 7px;
+  box-shadow: var(--black) -20px 20px;
+}
+
+.go-button-cont {
+  display: flex;
+  width: 90%;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.go-button-cont h2 {
+  font-family: Lemon Milk;
+  font-size: 1.2rem;
+  color: var(--black);
+  margin-bottom: 5px;
+}
+
+.go-button {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  border: 5px solid var(--black);
+  background-color: var(--blue);
+  transition-duration: 0.3s;
+  transform: rotate(90deg);
+}
+
+.project-card:hover .go-button {
+  background-color: var(--red);
+  transform: rotate(0deg);
+}
+
+
+/* RESPONSIVE */
+@media screen and (max-width: 550px) {
+  .go-button-cont {
+    flex-direction: column;
+  }
+
+  .go-button {
+    margin-top: 20px;
+  }
+
+  .logo {
+    display: none;
+  }
+
+  .logo-short {
+    display: flex;
+  }
+
+  .nav-links li a {
+    display: none;
+  }
+
+  .about-short {
+    display: flex !important;
+  }
+
+  .projects-short {
+    display: flex !important;
+  }
+
+  footer {
+    flex-direction: column;
+    margin-left: 40px;
+  }
+
+  .footer-list {
+    flex-direction: column;
+    gap: 40px;
+  }
+
+  .project-title-dot {
+    display: none;
+  }
+}
+
+@media screen and (max-width: 980px) {
+  .card-container {
+    width: 50%;
+  }
+
+  .about-header {
+    flex-direction: column;
+    gap: 40px;
+  }
+
+  .contact {
+    flex-direction: column;
+    gap: 40px;
+  }
+
+  .contact-me {
+    width: 60%;
+  }
+}
