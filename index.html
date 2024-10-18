@@ -4,9 +4,13 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Portfolio | Oryza Sativa</title>
+    <meta
+      name="description"
+      content="Oryza Sativa, a front-end developer who loves design and programming. You can check my other projects and contact me here"
+    />
     <link
       rel="shortcut icon"
-      href="assets/img/favicon@4x.png"
+      href="assets/img/favicon.png"
       type="image/x-icon"
     />
     <link rel="stylesheet" href="css/style.css" />
@@ -58,6 +62,59 @@
         </ul>
       </div>
     </nav>
+
+    <div class="slider">
+      <div class="link-mobile" id="link-mobile">
+        <a href="/"><h3>Home</h3></a>
+        <a href="projects.html#recent"><h3>Recent</h3></a>
+        <a href="projects.html#archived"><h3>Archived</h3></a>
+        <a href="index.html#testimoni"><h3>Testimoni</h3></a>
+        <a href="index.html#contact"><h3>Contact</h3></a>
+      </div>
+      <div class="more-button">
+        <svg
+          xmlns="http://www.w3.org/2000/svg"
+          width="30"
+          height="30"
+          fill="currentColor"
+          class="bi bi-chevron-down"
+          viewBox="0 0 16 16"
+        >
+          <path
+            fill-rule="evenodd"
+            d="M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708"
+          />
+        </svg>
+      </div>
+      <div class="link-list">
+        <a href="/" class="link-item" style="--position: 1"><h3>Home</h3></a>
+        <a href="index.html#testimoni" class="link-item" style="--position: 2"
+          ><h3>Testimoni</h3></a
+        >
+        <a href="projects.html#archived" class="link-item" style="--position: 3"
+          ><h3>Archived</h3></a
+        >
+        <a href="index.html#contact" class="link-item" style="--position: 4"
+          ><h3>Contact</h3></a
+        >
+        <a href="projects.html#recent" class="link-item" style="--position: 5"
+          ><h3>Recent</h3></a
+        >
+        <a href="/" class="link-item" style="--position: 6"><h3>Home</h3></a>
+        <a href="index.html#testimoni" class="link-item" style="--position: 7"
+          ><h3>Testimoni</h3></a
+        >
+        <a href="projects.html#archived" class="link-item" style="--position: 8"
+          ><h3>Archived</h3></a
+        >
+        <a href="index.html#contact" class="link-item" style="--position: 9"
+          ><h3>Contact</h3></a
+        >
+        <a href="projects.html#recent" class="link-item" style="--position: 10"
+          ><h3>Recent</h3></a
+        >
+      </div>
+    </div>
 
     <header>
       <div class="about-header">
@@ -132,54 +189,101 @@
       </div>
     </header>
 
-    <main>
-      <div class="testimoni">
-        <div class="testimoni-card">
-          <div class="testimoni-card-text">
-            <h1>"</h1>
-            <p>
-              Lorem ipsum dolor sit amet consectetur adipisicing elit. Nemo nam
-              dolorum molestiae numquam ipsa pariatur quo exercitationem!
-            </p>
-            <br />
-            <p><b>Alex, Shopee</b></p>
-          </div>
+    <main class="about-main">
+      <div class="testimoni" id="testimoni">
+        <div class="contact-text">
+          <h1 class="title">What Do<br />They Say?</h1>
         </div>
-        <div class="testimoni-card">
-          <div class="testimoni-card-text">
-            <h1>"</h1>
-            <p>
-              Lorem ipsum dolor sit amet consectetur adipisicing elit. Nemo nam
-              dolorum molestiae numquam ipsa pariatur quo exercitationem!
-            </p>
-            <br />
-            <p><b>Alex, Shopee</b></p>
+        <div class="testimoni-list">
+          <div class="testimoni-card">
+            <div class="testimoni-card-text">
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                width="30"
+                height="30"
+                fill="currentColor"
+                class="bi bi-chat-right-quote"
+                viewBox="0 0 16 16"
+              >
+                <path
+                  d="M2 1a1 1 0 0 0-1 1v8a1 1 0 0 0 1 1h9.586a2 2 0 0 1 1.414.586l2 2V2a1 1 0 0 0-1-1zm12-1a2 2 0 0 1 2 2v12.793a.5.5 0 0 1-.854.353l-2.853-2.853a1 1 0 0 0-.707-.293H2a2 2 0 0 1-2-2V2a2 2 0 0 1 2-2z"
+                />
+                <path
+                  d="M7.066 4.76A1.665 1.665 0 0 0 4 5.668a1.667 1.667 0 0 0 2.561 1.406c-.131.389-.375.804-.777 1.22a.417.417 0 1 0 .6.58c1.486-1.54 1.293-3.214.682-4.112zm4 0A1.665 1.665 0 0 0 8 5.668a1.667 1.667 0 0 0 2.561 1.406c-.131.389-.375.804-.777 1.22a.417.417 0 1 0 .6.58c1.486-1.54 1.293-3.214.682-4.112z"
+                />
+              </svg>
+              <p>
+                "Lorem ipsum dolor sit amet consectetur adipisicing elit. Nemo
+                nam dolorum molestiae numquam ipsa pariatur quo exercitationem!"
+              </p>
+              <br />
+              <p><b>Da Wei, Mihoyo</b></p>
+            </div>
           </div>
-        </div>
-        <div class="testimoni-card">
-          <div class="testimoni-card-text">
-            <h1>"</h1>
-            <p>
-              Lorem ipsum dolor sit amet consectetur adipisicing elit. Nemo nam
-              dolorum molestiae numquam ipsa pariatur quo exercitationem!
-            </p>
-            <br />
-            <p><b>Alex, Shopee</b></p>
+          <div class="testimoni-card">
+            <div class="testimoni-card-text">
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                width="30"
+                height="30"
+                fill="currentColor"
+                class="bi bi-chat-right-quote"
+                viewBox="0 0 16 16"
+              >
+                <path
+                  d="M2 1a1 1 0 0 0-1 1v8a1 1 0 0 0 1 1h9.586a2 2 0 0 1 1.414.586l2 2V2a1 1 0 0 0-1-1zm12-1a2 2 0 0 1 2 2v12.793a.5.5 0 0 1-.854.353l-2.853-2.853a1 1 0 0 0-.707-.293H2a2 2 0 0 1-2-2V2a2 2 0 0 1 2-2z"
+                />
+                <path
+                  d="M7.066 4.76A1.665 1.665 0 0 0 4 5.668a1.667 1.667 0 0 0 2.561 1.406c-.131.389-.375.804-.777 1.22a.417.417 0 1 0 .6.58c1.486-1.54 1.293-3.214.682-4.112zm4 0A1.665 1.665 0 0 0 8 5.668a1.667 1.667 0 0 0 2.561 1.406c-.131.389-.375.804-.777 1.22a.417.417 0 1 0 .6.58c1.486-1.54 1.293-3.214.682-4.112z"
+                />
+              </svg>
+              <p>
+                "Lorem ipsum dolor sit amet consectetur adipisicing elit. Nemo
+                nam dolorum molestiae numquam ipsa pariatur quo exercitationem!"
+              </p>
+              <br />
+              <p><b>Da Wei, Mihoyo</b></p>
+            </div>
+          </div>
+          <div class="testimoni-card">
+            <div class="testimoni-card-text">
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                width="30"
+                height="30"
+                fill="currentColor"
+                class="bi bi-chat-right-quote"
+                viewBox="0 0 16 16"
+              >
+                <path
+                  d="M2 1a1 1 0 0 0-1 1v8a1 1 0 0 0 1 1h9.586a2 2 0 0 1 1.414.586l2 2V2a1 1 0 0 0-1-1zm12-1a2 2 0 0 1 2 2v12.793a.5.5 0 0 1-.854.353l-2.853-2.853a1 1 0 0 0-.707-.293H2a2 2 0 0 1-2-2V2a2 2 0 0 1 2-2z"
+                />
+                <path
+                  d="M7.066 4.76A1.665 1.665 0 0 0 4 5.668a1.667 1.667 0 0 0 2.561 1.406c-.131.389-.375.804-.777 1.22a.417.417 0 1 0 .6.58c1.486-1.54 1.293-3.214.682-4.112zm4 0A1.665 1.665 0 0 0 8 5.668a1.667 1.667 0 0 0 2.561 1.406c-.131.389-.375.804-.777 1.22a.417.417 0 1 0 .6.58c1.486-1.54 1.293-3.214.682-4.112z"
+                />
+              </svg>
+              <p>
+                "Lorem ipsum dolor sit amet consectetur adipisicing elit. Nemo
+                nam dolorum molestiae numquam ipsa pariatur quo exercitationem!"
+              </p>
+              <br />
+              <p><b>Da Wei, Mihoyo</b></p>
+            </div>
           </div>
         </div>
       </div>
-      <div class="contact">
+      <div class="contact" id="contact">
         <div class="contact-text">
           <h1 class="title">Anything,<br />Anytime,<br />Anywhere.</h1>
         </div>
         <div class="contact-me">
-          <form action="" class="contact-form">
+          <form action="" class="contact-form" id="contactForm">
             <h2>Need Something?</h2>
             <div class="input-form">
               <label for="yourname"></label><br />
               <input
                 type="text"
-                name="yourname"
+                name="yourName"
                 id="yourname"
                 placeholder="Name"
               />
@@ -202,7 +306,7 @@
                 placeholder="Your Message"
               ></textarea>
             </div>
-            <button class="button">Send</button>
+            <button type="submit" class="button">Send</button>
           </form>
         </div>
       </div>
@@ -227,5 +331,8 @@
         <h4 class="logo-footer">ORYZA SATIVA</h4>
       </div>
     </footer>
+
+    <script src="js/main.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
   </body>
 </html>

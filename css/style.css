@@ -5,15 +5,24 @@
 }
 
 :root {
-    --black: #20211a;
-    --red: #ff6961;
-    --yellow: #fee032;
-    --blue: #dbeef7;
+  --black: #20211a;
+  --red: #ff6961;
+  --yellow: #fee032;
+  --blue: #dbeef7;
+
+  --width: 130px;
+  --height: 35px;
+  --quantity: 10;
 }
 
 * {
   margin: 0;
   font-family: Arial, Helvetica, sans-serif;
+}
+
+html,
+body {
+  scroll-behavior: smooth;
 }
 
 .home-page {
@@ -26,6 +35,16 @@
   justify-content: space-between;
   align-items: center;
   padding: 30px 5%;
+  animation: slideInDown 1s;
+}
+
+@keyframes slideInDown {
+  from {
+    transform: translateY(-100%);
+  }
+  to {
+    transform: translateY(0);
+  }
 }
 
 .logo {
@@ -74,6 +93,7 @@
 
 .active-page {
   color: var(--red) !important;
+  border-bottom: 3px solid var(--red);
 }
 
 .about-short {
@@ -90,11 +110,118 @@
   display: flex;
   justify-content: space-evenly;
   align-items: center;
-  padding: 60px 50px;
+  padding: 60px 40px;
+  animation: fadeIn 1.5s;
+}
+
+@keyframes fadeIn {
+  from {
+    transform: translateY(30px);
+    opacity: 0;
+  }
+  to {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+.slider {
+  width: 100%;
+  height: var(--height);
+  overflow: hidden;
+  border-top: 5px solid var(--black);
+  border-bottom: 5px solid var(--black);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 5px 0;
+  background-color: var(--blue);
+  transition-duration: 0.3s;
+}
+
+@keyframes slideInLeft {
+  from {
+    transform: translateX(100%);
+  }
+  to {
+    transform: translateY(0);
+  }
+}
+
+.link-list {
+  position: relative;
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  text-align: center;
+  min-width: calc(var(--width) * var(--quantity));
+  animation: slideInLeft 1s;
+}
+
+.link-item {
+  width: var(--width);
+  position: absolute;
+  left: 100%;
+  text-align: center;
+  text-decoration: none;
+  color: var(--black);
+  border-right: 3px solid var(--black);
+  transition-duration: 0.3s;
+  animation: autoSlide 25s linear infinite;
+  animation-delay: calc(
+    (25s / var(--quantity)) * (var(--position) - 1) - 25s
+  ) !important;
+}
+
+@keyframes autoSlide {
+  from {
+    left: 100%;
+  }
+  to {
+    left: calc(var(--width) * -1);
+  }
+}
+
+.link-item:hover {
+  color: var(--red);
+}
+
+.slider:hover .link-item {
+  animation-play-state: paused;
+}
+
+.link-mobile {
+  display: none;
+  gap: 20px;
+  text-align: center;
+  margin-bottom: 40px;
+}
+
+.link-mobile a {
+  text-decoration: none;
+  color: var(--black);
+  padding: 10px;
+  transition-duration: 0.3s;
+}
+
+.link-mobile a:hover {
+  background-color: #ff6961;
+}
+
+.more-button {
+  display: none;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  animation: float 2s infinite;
 }
 
 .card-container {
   width: 30%;
+}
+
+.card-container:hover .img-pp {
+  filter: none;
 }
 
 .card {
@@ -148,7 +275,7 @@
 
 .title {
   font-family: Lemon Milk;
-  font-size: 3rem;
+  font-size: 2.7rem;
   font-weight: 700;
   color: var(--black);
   margin-top: 10px;
@@ -158,6 +285,10 @@
   font-size: 1.1rem;
   margin-top: 15px;
   max-width: 500px;
+}
+
+.about-main {
+  padding: 100px 20px;
 }
 
 .contact-button {
@@ -186,6 +317,12 @@
 
 .testimoni {
   display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.testimoni-list {
+  display: flex;
   flex-wrap: wrap;
   justify-content: space-evenly;
   align-items: center;
@@ -195,12 +332,21 @@
 
 .testimoni-card {
   width: 170px;
-  background-color: var(--red);
+  background-image: url("https://images2.minutemediacdn.com/image/upload/c_crop,w_1410,h_793,x_0,y_80/c_fill,w_1200,ar_4:3,f_auto,q_auto,g_auto/images/voltaxMediaLibrary/mmsport/video_games/01j4kkg40rj6ansf0s30.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  filter: grayscale();
   border: 7px solid var(--black);
   border-radius: 10px;
-  padding: 20px;
+  width: 240px;
   margin: 10px;
   text-align: center;
+  transition-duration: 0.3s;
+}
+
+.testimoni-card-text {
+  color: transparent;
+  padding: 20px;
   transition-duration: 0.3s;
 }
 
@@ -208,11 +354,15 @@
   font-family: Lemon Milk;
   font-size: 2rem;
   font-weight: 700;
-  color: var(--black);
 }
 
-.testimoni-card-text h2 {
-  display: none;
+.testimoni-card-text p {
+  margin-top: 10px;
+}
+
+.testimoni-card-text:hover {
+  color: white;
+  backdrop-filter: blur(10px);
 }
 
 .testimoni-card:hover {
@@ -223,7 +373,7 @@
   display: flex;
   justify-content: space-evenly;
   align-items: center;
-  padding: 50px 0;
+  padding: 100px 0;
   margin: 50px 0px;
 }
 
@@ -253,7 +403,7 @@
 input {
   border: none;
   border-bottom: 2px solid var(--black);
-  background-color: transparent;
+  background-color: var(--blue);
 }
 
 input:focus {
@@ -262,6 +412,7 @@ input:focus {
 }
 
 textarea {
+  resize: none;
   border: none;
   border-bottom: 2px solid var(--black);
   background-color: transparent;
@@ -286,7 +437,7 @@ footer {
   display: flex;
   justify-content: end;
   align-items: start;
-  padding: 50px 0px;
+  padding: 40px 0px;
   width: 90%;
 }
 
@@ -321,8 +472,9 @@ footer {
   background-color: var(--blue);
 }
 
-main {
+.projects-main {
   padding: 50px 20px;
+  animation: fadeIn 1.5s;
 }
 
 .project-list {
@@ -366,7 +518,7 @@ main {
   align-items: center;
   justify-content: center;
   width: 100%;
-  padding: 50px 0px 20px 0px;
+  padding: 40px 0;
   text-decoration: none;
   color: var(--black);
   background-color: var(--yellow);
@@ -384,6 +536,7 @@ main {
   width: 50%;
   border-radius: 7px;
   box-shadow: var(--black) -20px 20px;
+  transform: scale(0.8);
 }
 
 .go-button-cont {
@@ -417,7 +570,6 @@ main {
   background-color: var(--red);
   transform: rotate(0deg);
 }
-
 
 /* RESPONSIVE */
 @media screen and (max-width: 550px) {
@@ -462,6 +614,28 @@ main {
   .project-title-dot {
     display: none;
   }
+
+  .link-list {
+    display: none;
+  }
+
+  .slider {
+    flex-direction: column;
+  }
+
+  .slider.active {
+    height: 400px;
+  }
+
+  .link-mobile.active {
+    display: flex;
+    flex-direction: column;
+    width: 90%;
+  }
+
+  .more-button {
+    display: flex;
+  }
 }
 
 @media screen and (max-width: 980px) {
@@ -476,10 +650,10 @@ main {
 
   .contact {
     flex-direction: column;
-    gap: 40px;
+    gap: 100px;
   }
 
   .contact-me {
-    width: 60%;
+    width: 70%;
   }
 }
