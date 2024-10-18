@@ -144,7 +144,7 @@ body {
     transform: translateX(100%);
   }
   to {
-    transform: translateY(0);
+    transform: translateX(0);
   }
 }
 
@@ -604,6 +604,7 @@ footer {
   footer {
     flex-direction: column;
     margin-left: 40px;
+    width: fit-content;
   }
 
   .footer-list {
